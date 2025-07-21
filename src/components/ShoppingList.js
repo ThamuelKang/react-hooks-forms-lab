@@ -17,7 +17,7 @@ function ShoppingList({ items }) {
   }
 
   function handleAddItem(newItem) {
-    setAllItems([...allItems, newItem]); 
+    setAllItems([...allItems, newItem]);
   }
 
   const itemsToDisplay = allItems.filter((item) => {
@@ -34,6 +34,7 @@ function ShoppingList({ items }) {
     <div className="ShoppingList">
       <ItemForm onItemFormSubmit={handleAddItem} />
       <Filter
+        search={search}
         onCategoryChange={handleCategoryChange}
         onSearchChange={handleSearchChange}
       />
